@@ -29,10 +29,6 @@
           >
         </v-toolbar>
       </template>
-      <!-- 
-      <pre>
-      {{ JSON.stringify(items, null, 2) }}
-      </pre> -->
 
       <template #item.items="{ item }">
         <div v-for="product in item.items" :key="product.id">
@@ -135,7 +131,7 @@ const createOrder = ({ state, items }) => {
   const newOrder = {
     items,
     state,
-    customerId: getRandomUserId(),
+    customerId: getRandomUserId(), // Mock user id
   };
 
   store
